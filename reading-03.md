@@ -1,18 +1,44 @@
 # Reading 03
 
+## Classes
 
-## Reading and writing files 
-- Header: metadata about the contents of the file (file name, size, type, and so on)
-- Data: contents of the file as written by the creator or editor
-- End of file (EOF): special character that indicates the end of the file
-- 'r'	Open for reading (default)
-- 'w'	Open for writing, truncating (overwriting) the file first
-- 'rb' or 'wb'	Open in binary mode
+- A Class is like an object constructor, or a "blueprint" for creating objects.
+- Example :
 
-## Python Exceptions
-- raise allows you to throw an exception at any time.
-- assert enables you to verify if a certain condition is met and throw an exception if it isn’t.
-- In the try clause, all statements are executed until an exception is encountered.
-- except is used to catch and handle the exception(s) that are encountered in the try clause.
-- else lets you code sections that should run only when no exceptions are encountered in the try clause.
-- finally enables you to execute sections of code that should always run, with or without any previously encountered exceptions.
+```class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class.")
+
+myobjectx = MyClass()
+```
+
+- Almost everything in Python is an object, with its properties and methods.
+- Accessing Object Variables
+
+```class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class.")
+
+myobjectx = MyClass()
+
+myobjectx.variable
+```
+
+## Recursive Functions
+
+- This means that the function will continue to call itself and repeat its behavior until some condition is met to return a result. All recursive functions share a common structure made up of two parts: base case and recursive case.
+
+- Example is:
+
+```    # Base case: 1! = 1
+    if n == 1:
+        return 1
+
+    # Recursive case: n! = n * (n-1)!
+    else:
+        return n * factorial_recursive(n-1)
+```
